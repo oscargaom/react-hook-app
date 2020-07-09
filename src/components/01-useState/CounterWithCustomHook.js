@@ -3,16 +3,16 @@ import "./counter.css";
 import { useCounter } from "../../hooks/useCounter";
 
 export const CounterWithCustomHook = () => {
-  const { state, increment, reset, decrement } = useCounter(10);
+  const { counter, incrementByFactory, reset, decrementByFactory } = useCounter(10);
   const factory = 3;
 
   return (
     <>
-      <h1>Counter With Custom Hook: {state} </h1>
+      <h1>Counter With Custom Hook: {counter} </h1>
       <hr />
       <button 
         className="btn btn-primary" 
-        onClick={() => increment(factory)}>
+        onClick={() => incrementByFactory(factory)}>
         +{factory}
       </button>
       <button 
@@ -23,7 +23,7 @@ export const CounterWithCustomHook = () => {
       </button>
       <button 
         className="btn btn-primary" 
-        onClick={() => decrement(factory)}>
+        onClick={() => decrementByFactory(factory)}>
         -{factory}
       </button>
     </>
