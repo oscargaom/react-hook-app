@@ -46,14 +46,19 @@ export const useFetch = (url) => {
                 // }, 3000);
                 
                 if (isMounted.current) {
-
                     setState({
                         data,
                         loading:false,
                         error: null
                     });
-
                 } 
+            })
+            .catch( (err) =>{
+                setState({
+                    data:[],
+                    loading:false,
+                    error: 'Error al cargar la información: ' + err
+                });
             });
 
     }, [url]);

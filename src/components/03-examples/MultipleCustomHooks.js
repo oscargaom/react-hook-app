@@ -7,7 +7,7 @@ export const MultipleCustomHooks = () => {
     
     const { counter, increment } = useCounter(1);
     
-    console.log(`counter: ${counter}`);
+    // console.log(`counter: ${counter}`);
     
     const { data, loading } = useFetch(`https://www.breakingbadapi.com/api/quotes/${counter}`);
     

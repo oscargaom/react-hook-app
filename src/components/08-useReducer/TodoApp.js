@@ -27,9 +27,11 @@ export const TodoApp = () => {
 
     useEffect(() => {
         localStorage.setItem('todos', JSON.stringify(todos));
+        // console.log('entrando a useEffect');
+        // console.log(todos);
     }, [todos]);
 
-    const handleRemoveOnlick = (todoId) => {
+    const handleRemoveOnClick = (todoId) => {
 
         // const todosJson = JSON.parse(localStorage.getItem("todos"))
         // console.log(todosJson);
@@ -84,7 +86,7 @@ export const TodoApp = () => {
                                     <button
                                         name={todo.id}
                                         className="btn-danger"
-                                        onClick={() => { handleRemoveOnlick(todo.id) }}
+                                        onClick={() => { handleRemoveOnClick(todo.id) }}
                                     >
                                         Eliminar
                                     </button>
@@ -122,7 +124,7 @@ export const TodoApp = () => {
                     <TodoList
                         todos={todos}
                         handleToggle={handleToggle}
-                        handleRemoveOnlick={handleRemoveOnlick}
+                        handleRemoveOnClick={handleRemoveOnClick}
                     />
                 </div>
                 <div className="col-5">

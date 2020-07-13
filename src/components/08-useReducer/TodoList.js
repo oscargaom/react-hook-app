@@ -1,7 +1,7 @@
 import React from 'react';
 import { TodoListItem } from './TodoListItem';
 
-export const TodoList = ({todos, handleToggle, handleRemoveOnlick}) => {
+export const TodoList = ({todos, handleToggle, handleRemoveOnClick}) => {
     return (
         <ul className="list-group list-group-flush">
         {
@@ -11,7 +11,7 @@ export const TodoList = ({todos, handleToggle, handleRemoveOnlick}) => {
                     todo={todo} 
                     index={idx} 
                     handleToggle={handleToggle} 
-                    handleRemoveOnlick={handleRemoveOnlick}
+                    handleRemoveOnClick={handleRemoveOnClick}
                 />
             )
         }

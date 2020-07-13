@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas de componente <HookApp /> El componente debe existir 1`] = `
+<div>
+  <h1>
+    Hook app!!!
+  </h1>
+</div>
+`;

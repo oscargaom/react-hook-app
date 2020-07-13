@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const TodoListItem = ({todo, index, handleToggle, handleRemoveOnlick}) => {
+export const TodoListItem = ({todo, index, handleToggle, handleRemoveOnClick}) => {
 
     const {id, done, desc} = todo;
 
@@ -19,7 +19,7 @@ export const TodoListItem = ({todo, index, handleToggle, handleRemoveOnlick}) =>
             <button
                 name={id}
                 className="btn-danger"
-                onClick={() => { handleRemoveOnlick(id) }}
+                onClick={() => { handleRemoveOnClick(id) }}
             >
                 Eliminar
             </button>
